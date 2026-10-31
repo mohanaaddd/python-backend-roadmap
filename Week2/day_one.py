@@ -297,9 +297,21 @@
 # is_palindrome("Racecar")
 
 
-def avg_list(myList):
-    return int(sum(myList) / len(myList))
+# def avg_list(myList):
+#     return int(sum(myList) / len(myList))
 
 
-myList = [5, 5, 10, 20]
-print(avg_list(myList))
+# myList = [5, 5, 10, 20]
+# print(avg_list(myList))
+
+
+# def clamp(value, low, high):
+#     if value < high and value > low:
+#         return value
+#     elif value >= high:
+#         return high
+#     else:
+#         return low
+
+
+# print(clamp(90, 100, 200))
