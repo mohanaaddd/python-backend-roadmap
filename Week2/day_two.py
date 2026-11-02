@@ -255,27 +255,69 @@
 
 # ====================Word Counter====================
 
-sentence = input("Enter a sentence: ")  # the cat and the dog and the bird
+# sentence = input("Enter a sentence: ")  # the cat and the dog and the bird
 
-for mark in ",.!?;:":
-    sentence = sentence.replace(mark, "")
-splitted_sentence = sentence.lower().split()
-words = {}
+# for mark in ",.!?;:":
+#     sentence = sentence.replace(mark, "")
+# splitted_sentence = sentence.lower().split()
+# words = {}
 
-for word in splitted_sentence:
-    if word in words:
-        words[word] += 1
+# for word in splitted_sentence:
+#     if word in words:
+#         words[word] += 1
+#     else:
+#         words[word] = 1
+
+
+# def get_count(pair):
+#     return pair[1]
+
+
+# words_list = list(words.items())
+# ranked_words_all = sorted(words_list, key=get_count, reverse=True)
+# ranked_words_top3 = ranked_words_all[:3]
+
+# for word_top3, count in ranked_words_top3:
+#     print(f"{word_top3} : {count}")
+
+
+# myDict = ["Ahmed", "Ali", "Sara", "Salma", "Omar"]
+# newDict = {}
+# for key, value in myDict.items():
+#     newDict[value] = key
+# print(newDict)
+
+
+# a = {"x": 1, "y": 2}
+# b = {"y": 20, "z": 3}
+# c = a.copy()
+# c.update(b)
+# print(c)
+
+## grouping names with first letter
+
+# names = ["Ahmed", "Sara", "Ali"]
+# charDict = {}
+
+# for name in names:
+#     if name[0] in charDict:
+#         charDict[name[0]].append(name)
+#     else:
+#         charDict[name[0]] = [name]
+# print(charDict)
+
+
+# finding duplicates in a list
+
+mySet = [1, 2, 3, 4, 5, 2, 3, 4]
+
+seen = list()
+duplicates = list()
+
+for item in mySet:
+    if item in seen:
+        duplicates.append(item)
     else:
-        words[word] = 1
+        seen.append(item)
 
-
-def get_count(pair):
-    return pair[1]
-
-
-words_list = list(words.items())
-ranked_words_all = sorted(words_list, key=get_count, reverse=True)
-ranked_words_top3 = ranked_words_all[:3]
-
-for word_top3, count in ranked_words_top3:
-    print(f"{word_top3} : {count}")
+print(f"Duplicates: {duplicates}")
