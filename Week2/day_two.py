@@ -309,15 +309,59 @@
 
 # finding duplicates in a list
 
-mySet = [1, 2, 3, 4, 5, 2, 3, 4]
+# mySet = [1, 2, 3, 4, 5, 2, 3, 4]
 
-seen = list()
-duplicates = list()
+# seen = list()
+# duplicates = list()
 
-for item in mySet:
-    if item in seen:
-        duplicates.append(item)
-    else:
-        seen.append(item)
+# for item in mySet:
+#     if item in seen:
+#         duplicates.append(item)
+#     else:
+#         seen.append(item)
 
-print(f"Duplicates: {duplicates}")
+# print(f"Duplicates: {duplicates}")
+
+
+# items = {"a": 1, "b": 2}
+# new = {}
+# for key, value in items.items():
+#     new[value] = key
+
+# print(new)
+
+# myList = [1, 2, 3, 3, 4, 4, 4]
+# uniqueSet = set(myList)
+# print(uniqueSet)
+
+# most common item
+# myList = ["a", "b", "c", "a", "b", "a", "c", "a"]
+# myDict = dict()
+# for item in myList:
+#     if item in myDict:
+#         myDict[item] += 1
+#     else:
+#         myDict[item] = 1
+# winner = max(myDict, key=myDict.get)
+# print(winner)
+
+
+def is_anagram(word1, word2):
+    word1Dict = dict()
+    word2Dict = dict()
+    for char in word1:
+        if char in word1Dict:
+            word1Dict[char] += 1
+        else:
+            word1Dict[char] = 1
+    for char in word2:
+        if char in word2Dict:
+            word2Dict[char] += 1
+        else:
+            word2Dict[char] = 1
+    print(word1Dict)
+    print(word2Dict)
+    return word1Dict == word2Dict
+
+
+print(is_anagram("rat", "tar"))
