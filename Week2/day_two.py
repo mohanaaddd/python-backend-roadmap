@@ -346,22 +346,22 @@
 # print(winner)
 
 
-def is_anagram(word1, word2):
-    word1Dict = dict()
-    word2Dict = dict()
-    for char in word1:
-        if char in word1Dict:
-            word1Dict[char] += 1
-        else:
-            word1Dict[char] = 1
-    for char in word2:
-        if char in word2Dict:
-            word2Dict[char] += 1
-        else:
-            word2Dict[char] = 1
-    print(word1Dict)
-    print(word2Dict)
-    return word1Dict == word2Dict
+# def is_anagram(word1, word2):
+#     word1Dict = dict()
+#     word2Dict = dict()
+#     for char in word1:
+#         if char in word1Dict:
+#             word1Dict[char] += 1
+#         else:
+#             word1Dict[char] = 1
+#     for char in word2:
+#         if char in word2Dict:
+#             word2Dict[char] += 1
+#         else:
+#             word2Dict[char] = 1
+#     print(word1Dict)
+#     print(word2Dict)
+#     return word1Dict == word2Dict
 
 
-print(is_anagram("rat", "tar"))
+# print(is_anagram("rat", "tar"))
