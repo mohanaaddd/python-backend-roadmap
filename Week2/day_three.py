@@ -87,14 +87,80 @@
 # else:
 #     print("DOne")
 
-mySentence = "Hello my great absolute Neighbors"
+# mySentence = "Hello my great absolute Neighbors"
 
-myList = mySentence.split()
-count = 0
-for word in myList:
-    if len(word) > count:
-        count = len(word)
-        longestWord = word
-    else:
-        None
-print(longestWord) # Neighbors
+# myList = mySentence.split()
+# count = 0
+# for word in myList:
+#     if len(word) > count:
+#         count = len(word)
+#         longestWord = word
+#     else:
+#         None
+# print(longestWord) # Neighbors
+
+
+# sentence = "Hello my neighbors, nice to meet you all"
+
+# sentenceInList = sentence.split()
+# reversedList = []
+# for word in reversed(sentenceInList):
+#     reversedList.append(word)
+# print(reversedList)
+
+
+# myList = []
+
+# myTuple = ()
+
+# mySet = {"Mohanad", "2"}
+
+# myDict = {"one": "1", "two": "2 "}
+
+
+# classOne = {
+#     "Team One": ["Ahmed", "Mohamed", "Saleh"],
+#     "Team Two": ["Saeed", "Saafy", "Hesham"],
+# }
+
+# for playerOne in classOne["Team One"]:
+#     for playerTwo in classOne["Team Two"]:
+#         print(f"{playerOne} vs {playerTwo}")
+
+
+def is_palindrome(string):
+    newString = string.lower().replace(" ", "")
+    print(newString[::-1] == newString)
+
+
+def acronym_maker(sentence):
+    acronym = str()
+    senteceList = sentence.split()
+    for word in senteceList:
+        acronym = f"{acronym}{word[0]}"
+    return acronym.upper()
+
+
+# print(acronym_maker("as soon as possible"))
+
+
+def caesarCipher(string):
+    shift = 3
+    message = ""
+    for c in string:
+        if c.isalpha():
+            if c.isupper():
+                base = ord("A")
+            else:
+                base = ord("a")
+            position = ord(c) - base
+            newPosition = (position + shift) % 26
+            newChar = chr(newPosition + base)
+            message = f"{message}{newChar}"
+        else:
+            message = f"{message}{c}"
+    return message
+
+
+# print(caesarCipher("Hello"))
+
