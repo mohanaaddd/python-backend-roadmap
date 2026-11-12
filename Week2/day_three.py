@@ -58,15 +58,43 @@
 # print(longestWord)
 
 
-newPass = input("Enter Your New Password : ")
+# newPass = input("Enter Your New Password : ")
 
-if not any(c.isupper() for c in newPass):
-    print("Passwords Must Contain Upper Cased Letters")
-elif not any(c.islower() for c in newPass):
-    print("Passwords Must Contain Lower Cased Letters")
-elif not any(c.isdigit() for c in newPass):
-    print("Password must have a number")
-elif any(c.isspace() for c in newPass):
-    print("Passwords Can't Contain Spaces")
-else:
-    print("Password successfully set!")
+# if not any(c.isupper() for c in newPass):
+#     print("Passwords Must Contain Upper Cased Letters")
+# elif not any(c.islower() for c in newPass):
+#     print("Passwords Must Contain Lower Cased Letters")
+# elif not any(c.isdigit() for c in newPass):
+#     print("Password must have a number")
+# elif any(c.isspace() for c in newPass):
+#     print("Passwords Can't Contain Spaces")
+# else:
+#     print("Password successfully set!")
+
+
+# newPass = input("Enter Your New Password : ")
+
+# if len(newPass) < 8:
+#     print("Password has to be at least 8 chars")
+# elif not any(c.isupper() for c in newPass):
+#     print("No upper letters found")
+# elif not any(c.islower() for c in newPass):
+#     print("No lower letters found")
+# elif not any(c.isdigit() for c in newPass):
+#     print("Must contain at least 1 number")
+# elif any(c.isspace() for c in newPass):
+#     print("Can't contain Spaces")
+# else:
+#     print("DOne")
+
+mySentence = "Hello my great absolute Neighbors"
+
+myList = mySentence.split()
+count = 0
+for word in myList:
+    if len(word) > count:
+        count = len(word)
+        longestWord = word
+    else:
+        None
+print(longestWord) # Neighbors
