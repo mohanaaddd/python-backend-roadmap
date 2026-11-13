@@ -16,15 +16,15 @@ line_count = 0
 
 # search
 
-keyWord = str(input("Enter a keyword to search for : "))
+# keyWord = str(input("Enter a keyword to search for : "))
 
-with open("Week2/notes.txt", "r") as f:
-    found = False
-    foundLine = ""
+# with open("Week2/notes.txt", "r") as f:
+#     found = False
+#     foundLine = ""
 
-    for Line in f:
-        if keyWord in Line:
-            print(Line.strip())
-            found = True
-    if not found:
-        print("Not Found")
+#     for Line in f:
+#         if keyWord in Line:
+#             print(Line.strip())
+#             found = True
+#     if not found:
+#         print("Not Found")
