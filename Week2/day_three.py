@@ -144,23 +144,46 @@ def acronym_maker(sentence):
 # print(acronym_maker("as soon as possible"))
 
 
-def caesarCipher(string):
-    shift = 3
-    message = ""
-    for c in string:
-        if c.isalpha():
-            if c.isupper():
-                base = ord("A")
-            else:
-                base = ord("a")
-            position = ord(c) - base
-            newPosition = (position + shift) % 26
-            newChar = chr(newPosition + base)
-            message = f"{message}{newChar}"
-        else:
-            message = f"{message}{c}"
-    return message
+# def caesarCipher(string):
+#     shift = 3
+#     message = ""
+#     for c in string:
+#         if c.isalpha():
+#             if c.isupper():
+#                 base = ord("A")
+#             else:
+#                 base = ord("a")
+#             position = ord(c) - base
+#             newPosition = (position + shift) % 26
+#             newChar = chr(newPosition + base)
+#             message = f"{message}{newChar}"
+#         else:
+#             message = f"{message}{c}"
+#     return message
 
 
 # print(caesarCipher("Hello"))
 
+
+def caesarCipher(string, shift):
+    message = ""
+    for char in string:
+        if char.isspace():
+            message = f"{message} "
+        elif char.isalpha():
+            if char.isupper():
+                base = "A"
+            else:
+                base = "a"
+            position = ord(char) - ord(base)
+            calcPosition = ((position + shift) % 26) + ord(base)
+            newChar = chr(calcPosition)
+            message = f"{message}{newChar}"
+        else:
+            message = "Invalid Input"
+            break
+
+    return message
+
+
+print(caesarCipher("Xyz", 3))
